@@ -25,7 +25,7 @@ package phc1990.rubikscubemock.state;
  * <li>The amount of locations that the intersection represents depends on both,
  * the size of the cube and the slices depth:</li>
  * <ol>
- * <li>In a cube with no inner layers (i.e. N <= 2), the intersection always
+ * <li>In a cube with no inner layers (i.e. N = 2), the intersection always
  * represents N locations.</li>
  * <li>In a cube with inner layers (i.e. N > 2), the intersection can represent
  * either:</li>
@@ -75,8 +75,8 @@ public class Intersection {
 	 */
 	public Intersection(int cubeSize, Slice slice1, Slice slice2) {
 
-		if (cubeSize < 1) {
-			throw new IllegalArgumentException("Cannot create instance, cube size must be greater than 0.");
+		if (cubeSize < 2) {
+			throw new IllegalArgumentException("Cannot create instance, cube size must be greater than 1.");
 		}
 
 		if (slice1.direction == slice2.direction || slice1.direction == slice2.direction.getOpposite()) {

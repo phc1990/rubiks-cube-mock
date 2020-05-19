@@ -1,6 +1,3 @@
-/**
- * 
- */
 package phc1990.rubikscubemock.state;
 
 import java.util.Arrays;

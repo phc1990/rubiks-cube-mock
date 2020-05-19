@@ -41,7 +41,7 @@ public class Slice {
 	/**
 	 * Depth coordinate.
 	 */
-	private final int depth;
+	final int depth;
 
 	/**
 	 * Constructor.
@@ -79,7 +79,7 @@ public class Slice {
 
 		// Opposite direction criterion
 		if (this.direction == other.direction.getOpposite()) {
-			return this.depth == cubeSize + 1 - other.depth;
+			return this.depth == other.getEquivalentDepth(direction, cubeSize);
 		}
 
 		return false;
@@ -114,11 +114,19 @@ public class Slice {
 	 */
 	int getEquivalentDepth(final Face newDirection, final int cubeSize) {
 
-		if (direction.getOpposite() == newDirection) {
-			return cubeSize + 1 - depth;
+		int equivalentDepth = 0;
+
+		if (direction == newDirection) {
+			equivalentDepth = depth;
+		} else if (direction.getOpposite() == newDirection) {
+			equivalentDepth = cubeSize + 1 - depth;
+
+			if (equivalentDepth < 1) {
+				throw new RuntimeException("Resulting equivalent depth is lower than 1.");
+			}
 		}
 
-		return 0;
+		return equivalentDepth;
 	}
 
 }
