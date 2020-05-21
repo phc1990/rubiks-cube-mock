@@ -17,6 +17,7 @@ jobs:
   
   assemble:
     name: Assemble with Gradle
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - name: Assemble
