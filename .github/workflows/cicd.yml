@@ -1,0 +1,23 @@
+name: CICD
+
+on:
+  [push, pull_request]
+
+jobs:
+  setup:
+    name: Sets up the workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+  
+  assemble:
+    name: Assemble with Gradle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assemble
+        run: ./gradlew assemble
