@@ -20,3 +20,7 @@ jobs:
         run: ./gradlew assemble
       - name: Test
         run: ./gradlew test
+      - name: Code coverage
+        run: |
+          ./gradlew jacocoTestReport
+          ./gradlew generateJacocoBadge
