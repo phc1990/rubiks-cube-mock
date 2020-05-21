@@ -5,7 +5,7 @@ on:
 
 jobs:
   setup:
-    name: Sets up the workflow
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -14,11 +14,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-  
-  assemble:
-    name: Assemble with Gradle
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
       - name: Assemble
         run: ./gradlew assemble
+      - name: Test
+        run: ./gradlew test
