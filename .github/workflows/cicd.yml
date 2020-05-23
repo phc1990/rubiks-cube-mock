@@ -20,7 +20,20 @@ jobs:
         run: ./gradlew assemble
       - name: Test
         run: ./gradlew test
-      - name: Code coverage
+      - name: Analysis
         run: |
           ./gradlew jacocoTestReport
-          ./gradlew generateJacocoBadge
+      - name: Local changes
+        run: |
+          date > date.txt
+      - name: Commit local changes
+        run: | 
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+      - name: Push local changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+        
