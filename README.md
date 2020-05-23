@@ -1,19 +1,9 @@
-# Rubik's Cube Mock
+# Rubik's Cube Mock ![] ![CI](https://github.com/phc1990/rubiks-cube-mock/workflows/CI/badge.svg) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-![](https://github.com/phc1990/rubikscubemock/workflows/CICD/badge.svg)
 
 Rubik's Cube mock.
 
-## Code analysis
 
-### Coverage
+#### Test coverage ![INSTRUCTION](X) ![LINE](X) ![BRANCH](X) ![CLASS](X) ![METHOD](X)
 
-![INSTRUCTION](X)
-![LINE](X)
-![BRANCH](X)
-![CLASS](X)
-![METHOD](X)
-
-### Complexity
-
-![COMPLEXITY](X)
+#### Code analysis ![COMPLEXITY](X)
