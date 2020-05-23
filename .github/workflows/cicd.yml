@@ -25,6 +25,7 @@ jobs:
           ./gradlew jacocoTestReport
       - name: Local changes
         run: |
+          which xmllint
           date > date.txt
       - name: Commit local changes
         run: | 
