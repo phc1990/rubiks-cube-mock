@@ -8,8 +8,8 @@ Rubik's Cube mock.
 
 | Code coverage  |
 |---|
-| ![INSTRUCTION]()  |
-| ![LINE]()  |
-| ![BRANCH]()  |
-| ![CLASS]()  |
-| ![METHOD]()  |
+| ![INSTRUCTION](X)  |
+| ![LINE](X)  |
+| ![BRANCH](X)  |
+| ![CLASS](X)  |
+| ![METHOD](X)  |
