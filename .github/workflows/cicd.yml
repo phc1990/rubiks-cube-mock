@@ -23,16 +23,13 @@ jobs:
       - name: Analysis
         run: |
           ./gradlew jacocoTestReport
-      - name: Local changes
-        run: |
-          which xmllint
-          date > date.txt
+          ./gradlew updateReadmeBadges
       - name: Commit local changes
         run: | 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add date.txt
-          git commit -m "Updated README"
+          git add README.md
+          git commit -m "Updated README badges"
       - name: Push local changes
         uses: ad-m/github-push-action@master
         with:

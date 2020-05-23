@@ -17,18 +17,79 @@ dependencies {
 	testCompile group: 'junit', name: 'junit', version: '4.13'
 }
 
+def readme = file("${projectDir}/README.md")
+def jacocoReportXml = file("${buildDir}/reports/jacoco/report.xml")
+
 jacoco {
     toolVersion = "0.8.5"
 }
 
 jacocoTestReport {
     reports {
-        html.enabled false
-        csv.enabled false
-        xml.enabled true
-        xml.destination file("${buildDir}/reports/jacoco/report.xml")
+        html {
+        	enabled false
+        }
+        
+        csv {
+        	enabled false
+        }
+        
+        xml {
+        	enabled true
+        	destination jacocoReportXml
+        }
     }
 }
+
+task updateReadmeBadges {
+
+	doLast {
+		def parser = new XmlSlurper()
+		
+		parser.setFeature("http://apache.org/xml/features/disallow-doctype-decl", false) 
+		parser.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+		
+		def content = parser.parse(jacocoReportXml)
+		
+		content.counter.each {
+		
+			def type = it.@type.text()
+			def covered = it.@covered.toInteger()
+			def missed = it.@missed.toInteger()
+			def total = covered + missed
+			def percentage = total = 0 ? 100.0 : ((100.0 * covered) / total)
+			
+			def color = 'brightgreen'
+			
+			if (percentage < 90) {
+				color = 'green'
+			}
+			
+			if (percentage < 75) {
+				color = 'yellowgreen'
+			}
+			
+			if (percentage < 60) {
+				color = 'yellow'
+			}
+			
+			if (percentage < 50) {
+				color = 'orange'
+			}
+			
+			if (percentage < 30) {
+				color = 'red'
+			}
+			
+			def pattern = '!\\[' + type + ']\\(.+?\\)'
+			def replacement = '![' + type + '](https://img.shields.io/badge/' + type.toLowerCase() + '--coverage' + '-' + percentage.round(0).toString() + '%25-' + color + '.svg)'
+			
+			readme.text = readme.text.replaceAll(pattern, replacement)
+		}
+	}
+
+}
+
 
 jacocoBadgeGenSetting {
     jacocoReportPath  "$buildDir/reports/jacoco/report.xml"
