@@ -10,8 +10,8 @@ import phc1990.rubikscubemock.state.Intersection;
 
 /**
  * <p>
- * Elementary rotation, constituted by the motion of a single layer (face
- * rotation/slice turn).
+ * Elementary rotation, constituted by the motion of a single slice (either a
+ * 'face rotation' or a 'slice turn').
  * </p>
  *
  * @author Pau Hebrero Casasayas - May 18, 2020
