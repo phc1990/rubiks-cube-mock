@@ -6,4 +6,5 @@ Rubik's Cube mock.
 
 #### Test coverage ![INSTRUCTION](X) ![LINE](X) ![BRANCH](X) ![CLASS](X) ![METHOD](X)
 
+
 #### Code analysis ![COMPLEXITY](X)
