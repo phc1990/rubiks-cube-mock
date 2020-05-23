@@ -23,7 +23,7 @@ jobs:
       - name: Analysis
         run: |
           ./gradlew jacocoTestReport
-          ./gradlew updateReadmeBadges
+          ./gradlew generateJacocoBadge
       - name: Commit local changes
         run: | 
           git config --local user.email "action@github.com"
