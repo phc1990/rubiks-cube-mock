@@ -28,8 +28,8 @@ jobs:
         run: | 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add --all
-          git commit -m "Updated README badges"
+          git add README.md || true
+          git commit -m "Updated README badges" || true
       - name: Push local changes
         uses: ad-m/github-push-action@master
         with:
