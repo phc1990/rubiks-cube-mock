@@ -8,12 +8,12 @@ Rubik's Cube mock.
 
 ### Coverage
 
-![INSTRUCTION](X)
-![LINE](X)
-![BRANCH](X)
-![CLASS](X)
-![METHOD](X)
+![INSTRUCTION](https://img.shields.io/badge/instruction--coverage-21%25-red.svg)
+![LINE](https://img.shields.io/badge/line--coverage-23%25-red.svg)
+![BRANCH](https://img.shields.io/badge/branch--coverage-32%25-red.svg)
+![CLASS](https://img.shields.io/badge/class--coverage-25%25-red.svg)
+![METHOD](https://img.shields.io/badge/method--coverage-21%25-red.svg)
 
 ### Complexity
 
-![COMPLEXITY](X)
+![COMPLEXITY](https://img.shields.io/badge/complexity-10.67-yellow.svg)
