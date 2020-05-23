@@ -8,8 +8,8 @@ Rubik's Cube mock.
 
 | Code coverage  |
 |---|
-| ![INSTRUCTION](X)  |
-| ![LINE](X)  |
-| ![BRANCH](X)  |
-| ![CLASS](X)  |
-| ![METHOD](X)  |
+| ![INSTRUCTION](https://img.shields.io/badge/instruction--coverage-22%25-red.svg)  |
+| ![LINE](https://img.shields.io/badge/line--coverage-24%25-red.svg)  |
+| ![BRANCH](https://img.shields.io/badge/branch--coverage-32%25-orange.svg)  |
+| ![CLASS](https://img.shields.io/badge/class--coverage-25%25-red.svg)  |
+| ![METHOD](https://img.shields.io/badge/method--coverage-21%25-red.svg)  |
