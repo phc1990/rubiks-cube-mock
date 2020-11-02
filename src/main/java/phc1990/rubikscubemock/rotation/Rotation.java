@@ -11,7 +11,7 @@ import phc1990.rubikscubemock.state.Intersection;
  * Represents a rotation applied on a cube.
  * </p>
  *
- * @author Pau Hebrero Casasayas - May 18, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 18, 2020
  */
 public interface Rotation {
 

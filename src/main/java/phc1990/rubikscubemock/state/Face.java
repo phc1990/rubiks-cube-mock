@@ -10,7 +10,7 @@ import java.util.List;
  * </a>.
  * </p>
  *
- * @author Pau Hebrero Casasayas - May 18, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 18, 2020
  */
 public enum Face {
 
@@ -81,6 +81,16 @@ public enum Face {
 	}
 
 	/**
+	 * Returns true if the instance is orthogonal to another one.
+	 * 
+	 * @param other the other instance
+	 * @return true if orthogonal
+	 */
+	public boolean isOrthogonal(final Face other) {
+		return !(this == other || this == other.getOpposite());
+	}
+	
+	/**
 	 * Returns a stream representing the complete rotation sequence of the
 	 * instance (e.g. U -> R -> D -> L).
 	 * 
@@ -122,7 +132,7 @@ public enum Face {
 	 * (or {B,L,D}), there is no need to create a new instance every time.
 	 * </p>
 	 * 
-	 * @author Pau Hebrero Casasayas - May 19, 2020
+	 * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 19, 2020
 	 */
 	private static class RotationDirection {
 

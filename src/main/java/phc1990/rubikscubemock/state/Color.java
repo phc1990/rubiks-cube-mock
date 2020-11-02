@@ -5,7 +5,7 @@ package phc1990.rubikscubemock.state;
  * Rubik's Cube common color scheme.
  * </p>
  * 
- * @author Pau Hebrero Casasayas - May 19, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 19, 2020
  */
 public enum Color {
 

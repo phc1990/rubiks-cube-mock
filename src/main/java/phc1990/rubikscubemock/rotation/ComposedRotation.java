@@ -12,7 +12,7 @@ import phc1990.rubikscubemock.state.Intersection;
  * Composed rotation, constituted by a sequence of one or more rotations.
  * </p>
  * 
- * @author Pau Hebrero Casasayas - May 19, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 19, 2020
  */
 class ComposedRotation implements Rotation {
 

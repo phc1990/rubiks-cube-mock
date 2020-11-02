@@ -36,7 +36,7 @@ import phc1990.rubikscubemock.state.Slice;
  * @see Slice
  * @see Color
  *
- * @author Pau Hebrero Casasayas - May 18, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 18, 2020
  */
 public class Cube {
 
@@ -64,6 +64,7 @@ public class Cube {
 			throw new IllegalArgumentException("Cannot create instance, cube size must be greater than 1.");
 		}
 
+		//TODO check illegal initial state
 		this.size = size;
 		this.state = initialState;
 	}

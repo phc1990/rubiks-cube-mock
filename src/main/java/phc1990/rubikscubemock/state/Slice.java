@@ -23,13 +23,13 @@ package phc1990.rubikscubemock.state;
  * 
  * <ul>
  * <li>This instance is immutable.</li>
- * <li>Ambiguity: the same slice might be represented with different coordinate
- * values (e.g. in a N-cube, {U,1} is equivalent to {D,N}).</li>
+ * <li>The same slice might be represented with different coordinate values
+ * (e.g. in a N-cube, {U,1} is equivalent to {D,N}).</li>
  * </ul>
  * 
  * @see Intersection
  * 
- * @author Pau Hebrero Casasayas - May 19, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 19, 2020
  */
 public class Slice {
 

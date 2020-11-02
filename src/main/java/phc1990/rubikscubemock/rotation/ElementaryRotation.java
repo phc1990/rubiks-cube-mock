@@ -14,7 +14,7 @@ import phc1990.rubikscubemock.state.Intersection;
  * 'face rotation' or a 'slice turn').
  * </p>
  *
- * @author Pau Hebrero Casasayas - May 18, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 18, 2020
  */
 class ElementaryRotation implements Rotation {
 
@@ -74,7 +74,6 @@ class ElementaryRotation implements Rotation {
 		/*
 		 * SLICE TURN
 		 */
-
 		// Coordinate of the slice that will be moved {face, depth}
 		final Slice sliceCoordinate = new Slice(face, depth);
 
@@ -105,7 +104,6 @@ class ElementaryRotation implements Rotation {
 
 			// End rotation
 			map0.put(location0, newColor0);
-
 		}
 
 		/*

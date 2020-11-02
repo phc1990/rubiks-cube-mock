@@ -19,8 +19,8 @@ package phc1990.rubikscubemock.state;
  * 
  * <ul>
  * <li>This instance is immutable.</li>
- * <li>Ambiguity: the same intersection might be represented by a different set
- * of slices (e.g. in a N-cube {{1,U},{1,F}} is equivalent to {{1,F},{1,U}},
+ * <li>The same intersection might be represented by a different set of slices
+ * (e.g. in a N-cube {{1,U},{1,F}} is equivalent to {{1,F},{1,U}},
  * {{1,U},{N,B}}, {{N,D},{1,F}}, {{N,D},{N,B}} and {{N,B},{N,D}}).</li>
  * <li>The amount of locations that the intersection represents depends on both,
  * the size of the cube and the slices depth:</li>
@@ -39,7 +39,7 @@ package phc1990.rubikscubemock.state;
  * 
  * @see Slice
  * 
- * @author Pau Hebrero Casasayas - May 19, 2020
+ * @author <a href="https://github.com/phc1990">Pau Hebrero Casasayas</a> - May 19, 2020
  */
 public class Intersection {
 
@@ -79,7 +79,7 @@ public class Intersection {
 			throw new IllegalArgumentException("Cannot create instance, cube size must be greater than 1.");
 		}
 
-		if (slice1.direction == slice2.direction || slice1.direction == slice2.direction.getOpposite()) {
+		if (slice1.direction.isOrthogonal(slice2.direction)) {
 			throw new IllegalArgumentException("Cannot create instance, slices are not perpendcular.");
 		}
 
